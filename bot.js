@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
-const db = require('quick.db');
 const client = new Discord.Client();   
 const giphy = require('giphy-api')();    
-const googl = require('goo.gl'); 
 const translate = require('google-translate-api'); 
 const fs = require("fs");      
 const getYoutubeID = require('get-youtube-id'); 
@@ -492,13 +490,7 @@ let PREFIX = '!'
     }
 });
 
-client.on('message',function(message) {
-let args = message.content.split(" ").slice(1).join(" ");
-if(message.content.startsWith(prefix + "say")) {
-if(!args) return;
-message.channel.send(`**# ${args}**`); // محطوط # عشان محد يستخدم البوت لتبنيد / طرد احد من السيرفر
-}
-});
+
 
 
 
@@ -616,7 +608,7 @@ if (message.content.startsWith("!cv")) {
 });
 
 			      client.on("message", (message) => {
-    if (message.content.startsWith('-delet')) {
+    if (message.content.startsWith('!delet')) {
         if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
 
         let args = message.content.split(' ').slice(1);
@@ -626,7 +618,7 @@ if (message.content.startsWith("!cv")) {
     }
 }); 
 
-const adminprefix = "-";
+const adminprefix = "!";
 const devs = ['396958215377780747'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
