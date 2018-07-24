@@ -34,7 +34,7 @@ bot.on('message',async message => {
   let mySupport = message.guild.roles.find('name',role);
   let acRoom = bot.channels.get('471348524403916810');
   if(message.content.startsWith(prefix + "قبول")) {
-    if(message.guild.id !== '471067470212497409') return;
+    if(message.guild.id !== '396958215377780747') return;
     if(!message.guild.member(message.author).hasPermission("MANAGE_ROLES")) return;
     if(!mention) return message.reply('منشن شخص');
     if(!role) return message.reply('ادخل اسم رتبة');
@@ -63,7 +63,7 @@ message.channel.sendEmbed(embed);
 });
 bot.on('message',async message => {
   let mention = message.mentions.members.first();
-  let acRoom = bot.channels.get('471348524403916810');
+  let acRoom = bot.channels.get('396958215377780747');
   if(message.content.startsWith(prefix + "رفض")) {
   if(message.guild.id !== '471067470212497409') return;
   if(!message.guild.member(message.author).hasPermission("MANAGE_ROLES")) return;
