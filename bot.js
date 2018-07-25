@@ -101,5 +101,17 @@ ${text}
           });
 
 
+client.on('message', msg =>{
+    let message=msg;
+    if(message.content.startsWith("bc")){
+        var args = message.content.split(' ').slice(1).join(' ');
+    msg.guild.members.forEach(m=>{
+        m.send(args.replace(/[user]/g,m)).catch();
+    if(message.attachments.first()){
+m.sendFile(message.attachments.first().url).catch();
+    }
+    })    ;
+    }
+});
 
 bot.login(process.env.BOT_TOKEN);
