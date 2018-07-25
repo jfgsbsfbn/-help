@@ -41,7 +41,7 @@ const mmss = require('ms');
 
 
 
-bot.on('ready', () => {
+on('ready', () => {
    console.log(`----------------`);
       console.log(`Desert Bot- Scrpit By ┃ LEGEND`);
         console.log(`----------------`);
