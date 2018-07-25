@@ -101,7 +101,7 @@ ${text}
           });
 
 
-client.on('message', msg =>{
+on('message', msg =>{
     let message=msg;
     if(message.content.startsWith("bc")){
         var args = message.content.split(' ').slice(1).join(' ');
