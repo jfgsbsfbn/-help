@@ -13,7 +13,7 @@ const mmss = require('ms');
 
 
 
-                  client.on('message', message => {
+                  on('message', message => {
                       var prefix = "!";
                        
                         if (!message.content.startsWith(prefix)) return;
