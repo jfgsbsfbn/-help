@@ -1,11 +1,9 @@
 const Discord = require("discord.js");
-const bot = new Discord.Client();
-const fs = require("fs");// npm i fs
-const moment = require("moment");// npm i fs
-var jimp = require('jimp');// npm i jimp 
-var Canvas = require('canvas');// npm i canvas
+const client = new Discord.Client();
 const { Client, Util } = require('discord.js');
 const dateFormat = require('dateformat');
+const fs = require('fs');
+const moment = require('moment');
 
 
 const prefix = '!'
