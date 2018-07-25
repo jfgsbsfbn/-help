@@ -10,7 +10,32 @@ const prefix = '!'
 const mmss = require('ms');
 
 
-
+                  client.on('message', message => {
+                      var prefix = "!";
+                       
+                        if (!message.content.startsWith(prefix)) return;
+                        var args = message.content.split(' ').slice(1);
+                        var argresult = args.join(' ');
+                        if (message.author.id == 455857357675560960) return;
+                       
+                
+                       
+                
+                       
+                      if (message.content.startsWith(prefix + 'setname')) {
+                      if (message.author.id !== '396958215377780747') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+                        client.user.setUsername(argresult).then
+                            message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
+                        return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
+                      } else
+                           
+                      if (message.content.startsWith(prefix + 'setavatar')) {
+                      if (message.author.id !== '396958215377780747') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+                      client.user.setAvatar(argresult);
+                          message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
+                      }
+                       
+                       });
 
 
 
